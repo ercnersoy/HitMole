@@ -38,7 +38,7 @@ function above () {
     }, MoleDuration);
 }
 
-function durationyiBaslat() {
+function durationStart() {
     if (!TimeExpired) {
       duration--;
       durationText.textContent = duration;
@@ -52,7 +52,7 @@ function durationyiBaslat() {
     skor = 0;
     TimeExpired = false;
     const interval = setInterval(() => {
-      durationyiBaslat();
+        durationStart();
       if (TimeExpired) clearInterval(interval);
     }, 1000);
     above();
