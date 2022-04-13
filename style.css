@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: sans-serif;
+  width: 80%;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.container h3 {
+  margin: 2rem 0;
+  font-weight: 300;
+}
+
+#start {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: 0;
+  background-color: rgb(131, 223, 131);
+  cursor: pointer;
+}
+
+#start:hover {
+  background-color: rgb(114, 226, 114);
+}
+
+.game-container {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.soil {
+  position: relative;
+  width: 25%;
+  height: 6rem;
+  margin: 3rem 1rem;
+}
+
+.soil::after {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("img/soil.png") center no-repeat;
+  background-size: cover;
+}
+
+.mole {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.5rem;
+  background: url("img/mole.png") no-repeat center;
+  background-size: contain;
+  transition: 0.3s ease all;
+}
+
+
+.mole.secilen {
+    top: -3rem;
+}
+
+#duration {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .container {
+      width: 70%;
+    }
+    .soil {
+      position: relative;
+      width: 30%;
+    }
+    #duration {
+      right: 5%;
+      top: 20%;
+      border-bottom: 1px solid black;
+      font-size: 1.2rem;
+    }
+  }
